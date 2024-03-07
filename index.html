@@ -10,21 +10,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <img class="header__img" src="images/ohmyfood@2x.svg" alt="logo d'OhMyFood">
     </header>
-    <main>
-        <div>
+    <main class="main">
+        <div class="main__inputcontent">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" value="Paris, Belleville">
+            <input class=".main__input" type="text" value="Paris, Belleville">
         </div>
-        <section>
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            <button>Explorez nos restaurants</button>                
+        <section class="homesection">
+            <h1 class="homesection__title">Réservez le menu qui vous convient</h1>
+            <p class="homesection__text">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <button class="button ">Explorez nos restaurants</button>                
         </section>
         <section>
             <h1>Fonctionnement</h1>
@@ -100,7 +103,7 @@
     </main>
     <footer class="footer">
         <p class="footer__title">ohmyfood</p>
-        <div>
+        <div class="footer__content">
             <div>
                 <i class="fa-solid fa-utensils"></i>
                 <a class="footer__link" href="">Proposer un restaurant</a>

@@ -1,0 +1,9 @@
+@import 'utils/variable';
+@import 'utils/mixin';
+
+.button{
+    @include main-font;
+    width: 218px;
+    height: 50px;
+    
+}
