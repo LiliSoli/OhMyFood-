@@ -1,9 +1,14 @@
-@import 'utils/variable';
-@import 'utils/mixin';
+@import '../utils/variable';
+@import '../utils/mixin';
 
 .button{
     @include main-font;
     width: 218px;
-    height: 50px;
-    
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    background: linear-gradient(to top, $primary-color, $secondary-button-color);
+    border: none;
+    border-radius: 25px;
+    padding: 13px 18.75px;
 }

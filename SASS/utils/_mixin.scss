@@ -6,9 +6,23 @@
     line-height: 18.75px;
 }
 
-@mixin title-font{
+@mixin title-font {
     font-family: $main-font-family;
     font-weight: 700;
     font-size: 24px;
     line-height: 28.13px;
+}
+
+@mixin title-restaurant{
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+}
+
+@mixin card-text{
+    font-family: $main-font-family;
+    font-weight: 300;
+    font-size: 17px;   
+    line-height: 19.92px;
 }

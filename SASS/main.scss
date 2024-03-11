@@ -2,55 +2,151 @@
 @import 'utils/mixin';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'components/button';
+@import 'components/card';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /*****Input*****/
-.main{
+main {
     background-color: $primary-bg-color;
 
-    &__inputcontent{
-        width: 100%;
+    .localisation {
         display: flex;
         justify-content: center;
-        align-items: center;
         gap: 17px;
-        padding: 15.5px 118.5px;
+        padding: 15.5px 0;
         color: $footer-bg-color;
         background-color: $input-background;
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
-    
-    &__input{
+
+    p {
         @include main-font;
         color: $footer-bg-color;
-        background-color: $input-background;
         border: none;
-        outline: none;        
+        outline: none;
     }
 }
 
 /*****Accueil*****/
-.homesection{
+.homesection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 57px;
 
-    &__title{
+    &__title {
         @include title-font;
         text-align: center;
         margin-top: 39px;
-        margin-left: max(42px);
-        margin-right: max(42px);
+        margin-left: max(50px);
+        margin-right: max(50px);
     }
 
-    &__text{
+    &__text {
         font-family: $main-font-family;
         font-weight: 300;
         font-size: 18px;
         line-height: 21.09px;
         text-align: center;
         margin: 20px max(26px) 27px max(26px);
+    }
+}
+
+/*****Fonctionnement*****/
+.functioning {
+    background-color: $color-white;
+    padding: 48px 20px 68px 20px;
+
+    &__title {
+        @include title-font;
+        padding-bottom: 26px;
+    }
+
+    &__content {
+
+        .functioning__step {
+            @include main-font;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            border-radius: 20px;
+            background-color: $primary-bg-color;
+            filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+            padding: 28px 33px;
+            position: relative;
+
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+
+            &__number {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $main-font-family;
+                font-weight: 500;
+                font-size: 14.18px;
+                line-height: 16.62px;
+                border-radius: 50%;
+                color: $color-white;
+                background-color: $primary-color;
+                position: absolute;
+                left: -12px;
+            }
+
+            &__txt {
+                position: absolute;
+                left: 73px;
+            }
+
+            .icon-menu {
+                font-size: 16px;
+                display: flex;
+                gap: 2px;
+
+                &:hover {
+                    .fa-solid {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            .fa-solid {
+                color: $icon-color;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+    }
+}
+
+/*****Restaurants*****/
+.restaurantssection {
+    padding: 54px 18px 66px 17px;
+
+    &__title {
+        @include title-font;
+        padding-bottom: 24px;
+    }
+
+    .cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        a{
+            text-decoration: none;
+        }
     }
 }

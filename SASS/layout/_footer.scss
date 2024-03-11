@@ -1,30 +1,34 @@
 @import '../utils/variable';
 
-.footer{
+.footer {
     width: 100%;
-    height: 186px;
     display: flex;
     flex-direction: column;
     color: $color-white;
     background-color: $footer-bg-color;
     padding: 22px 25px;
 
-        &__title{
-            font-family: "Shrikhand", serif;
-            font-size: 18px;
-            font-weight: 400;
-            margin-bottom: 16px;            
-        }
+    &__title {
+        font-family: "Shrikhand", serif;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
 
-        &__content{
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-        }
+    &__content {
+        display: flex;
+        flex-direction: column;
 
-        &__link{
-            text-decoration: none;
-            color: $color-white;
+        :not(:first-child) {
+            margin-top: 7px;
         }
-       
+    }
+
+    &__link {
+        @include main-font;
+        text-decoration: none;
+        color: $color-white;
+
+    }
+
 }
