@@ -3,12 +3,18 @@
 
 .button{
     @include main-font;
-    width: 218px;
     display: flex;
     align-items: center;
     color: $color-white;
     background: linear-gradient(to top, $primary-color, $secondary-button-color);
     border: none;
     border-radius: 25px;
+}
+
+.explore{
     padding: 13px 18.75px;
+}
+
+.command{
+    padding: 16px 48px 15px 49px; 
 }

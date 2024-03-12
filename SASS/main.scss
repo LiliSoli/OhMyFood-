@@ -1,9 +1,11 @@
 @import 'utils/variable';
 @import 'utils/mixin';
 @import 'layout/header';
-@import 'layout/footer';
 @import 'components/button';
 @import 'components/card';
+@import 'components/heart';
+@import 'components/dish_card';
+@import 'layout/footer';
 
 * {
     margin: 0;
@@ -11,6 +13,7 @@
     box-sizing: border-box;
 }
 
+/*****Page d'accueil*****/
 /*****Input*****/
 main {
     background-color: $primary-bg-color;
@@ -145,8 +148,72 @@ main {
         flex-direction: column;
         gap: 18px;
 
-        a{
+        a {
             text-decoration: none;
         }
     }
+}
+
+
+/*****Page restaurant La palette du goût*****/
+/*****Photo et titre*****/
+.restaurant-img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+.restaurant-title-content {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px 50px 0px 0px;
+    background-color: $primary-bg-color;
+    background-clip: padding-box;
+    margin-top: -49px;
+    position: relative;
+
+    .restaurant-title {
+        @include page-restaurant-title;
+        color: $page-restaurant-title-color;
+        padding-left: 17px;
+        padding-top: 32px;
+    }
+}
+
+/*****MENUS*****/
+.menu {
+    margin-bottom: 40px;
+
+    &__section {
+        margin: 40px 13px 0px 13px;
+
+        .menu__title {
+            @include menu-title;
+        }
+
+        .green_line {
+            display: block;
+            background-color: $secondary-color;
+            width: 40px;
+            height: 3px;
+            margin-top: 5.25px;
+        }
+
+        .menu__content {
+            >.dish_card:first-child {
+                margin-top: 10.5px;
+            }
+            
+            >.dish_card:not(:first-child) {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+/*****CTA Commander*****/
+.cta{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
 }

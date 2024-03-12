@@ -47,13 +47,5 @@
         .card__txt{
             @include card-text;
         }
-
-        .fa-heart{
-            font-size: 21px;
-            position: absolute;
-            right: 25px;
-            top: 23px;
-            color: black;
-        }
     }
 }

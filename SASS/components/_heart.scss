@@ -1,0 +1,16 @@
+@import '../utils/variable';
+@import '../utils/mixin';
+
+/*****heart*****/
+.fa-heart{
+    font-size: 21px;
+    position: absolute;
+    right: 25px;
+    top: 23px;
+    color: black;
+}
+
+.restaurant-page-heart{
+    right: 41px;
+    top: 40px;
+}
