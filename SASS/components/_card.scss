@@ -1,7 +1,7 @@
 @import '../utils/variable';
 @import '../utils/mixin';
 
-.card {
+.restaurant__card {
     width: 100%;
     background-color: $color-white;
     border-radius: 15px;
@@ -15,7 +15,7 @@
         border-radius: 15px 15px 0 0;
     }
 
-    .new {
+    &__status {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -31,21 +31,21 @@
         padding: 8px 10px 7px 10px;
     }
 
-    &__content {
+    &__info {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 16px 25px 12px 13px;
         position: relative;
 
-
-        .card__title{
+        .restaurant__name{
             @include title-restaurant;
             color: black
         }
 
-        .card__txt{
+        .restaurant__location{
             @include card-text;
+            color: black;
         }
     }
 }

@@ -27,7 +27,7 @@
     line-height: 19.92px;
 }
 
-@mixin page-restaurant-title{
+@mixin page-restaurant_title{
     font-family: $secondary-font-family;
     font-weight: 400;
     font-style: italic;
@@ -56,3 +56,9 @@
     line-height: 17.63px;
 }
 
+@mixin title-font-desktop {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46.88px;
+}

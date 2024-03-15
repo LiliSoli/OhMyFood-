@@ -16,9 +16,9 @@
 /*****Page d'accueil*****/
 /*****Input*****/
 main {
-    background-color: $primary-bg-color;
+    background-color: $color-white;
 
-    .localisation {
+    .localization {
         display: flex;
         justify-content: center;
         gap: 17px;
@@ -26,27 +26,27 @@ main {
         color: $footer-bg-color;
         background-color: $input-background;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
 
-    p {
-        @include main-font;
+        &__text{
+            @include main-font;
         color: $footer-bg-color;
         border: none;
         outline: none;
+        }
     }
 }
 
 /*****Accueil*****/
-.homesection {
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 57px;
+    background-color: $primary-bg-color;
+    padding: 39px 0 57px 0;
 
     &__title {
         @include title-font;
         text-align: center;
-        margin-top: 39px;
         margin-left: max(50px);
         margin-right: max(50px);
     }
@@ -56,6 +56,7 @@ main {
         font-weight: 300;
         font-size: 18px;
         line-height: 21.09px;
+        color: $footer-bg-color;
         text-align: center;
         margin: 20px max(26px) 27px max(26px);
     }
@@ -64,24 +65,24 @@ main {
 /*****Fonctionnement*****/
 .functioning {
     background-color: $color-white;
-    padding: 48px 20px 68px 20px;
+    padding: 48px 0 68px 0;
 
     &__title {
         @include title-font;
-        padding-bottom: 26px;
+        padding: 0 0 26px 26px;
     }
 
     &__content {
 
         .functioning__step {
             @include main-font;
-            width: 100%;
             display: flex;
             flex-direction: row;
             border-radius: 20px;
             background-color: $primary-bg-color;
             filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
             padding: 28px 33px;
+            margin: 0 20px 0 32px;
             position: relative;
 
             &:not(:first-child) {
@@ -108,6 +109,7 @@ main {
             &__txt {
                 position: absolute;
                 left: 73px;
+                color: black;
             }
 
             .icon-menu {
@@ -135,7 +137,8 @@ main {
 }
 
 /*****Restaurants*****/
-.restaurantssection {
+.restaurants {
+    background-color: $primary-bg-color;
     padding: 54px 18px 66px 17px;
 
     &__title {
@@ -143,46 +146,137 @@ main {
         padding-bottom: 24px;
     }
 
-    .cards-list {
+    &__list {
         display: flex;
         flex-direction: column;
         gap: 18px;
 
-        a {
+        .restaurant__link {
             text-decoration: none;
         }
     }
 }
 
+/*****Media query Tablette*****/
+@media screen and (min-width: 1024px) {
+    main .localization{
+        filter: none;
+    }
+
+    .home {
+        padding: 30px 0 30px 0;
+
+        &__title {
+            @include title-font-desktop;
+        }
+
+        &__text {
+            margin: 24px 0 24px 0;
+        }
+    }
+
+    .functioning {
+        padding: 50px 100px 50px 100px;
+        width: 100%;
+
+        &__title {
+            padding-bottom: 25px;
+        }
+
+        &__content {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 36px;
+
+            .functioning__step {
+                width: 33%;
+
+                &:not(:first-child) {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    .restaurants {
+        padding: 30px 100px 30px 100px;
+
+        &__title {
+            padding-bottom: 28px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 50px;
+            column-gap: 100px;
+        }
+    }
+}
+
+/*****Media query Desktop*****/
+@media screen and (min-width: 1440px) {
+    .functioning {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
+    .restaurants {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+}
+
+/*****Media query Large Desktop*****/
+@media screen and (min-width: 2560px) {
+    .functioning {
+        padding-left: 400px;
+        padding-right: 400px;
+    }
+
+    .restaurants {
+        padding-left: 400px;
+        padding-right: 400px;
+    }
+}
 
 /*****Page restaurant La palette du goût*****/
 /*****Photo et titre*****/
+
 .restaurant-img {
     width: 100%;
     height: 275px;
     object-fit: cover;
 }
 
-.restaurant-title-content {
-    display: flex;
-    flex-direction: row;
-    border-radius: 50px 50px 0px 0px;
+.main{
     background-color: $primary-bg-color;
-    background-clip: padding-box;
-    margin-top: -49px;
-    position: relative;
+}
+.restaurant__container{
+    background-color: $primary-bg-color;
 
-    .restaurant-title {
-        @include page-restaurant-title;
-        color: $page-restaurant-title-color;
-        padding-left: 17px;
-        padding-top: 32px;
+    .restaurant__title-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 50px 50px 0px 0px;
+        background-color: $primary-bg-color;
+        background-clip: padding-box;            padding: 32px 40px 0px 17px;
+        margin-top: -49px;
+        position: relative;
+    
+        .restaurant__title {
+            @include page-restaurant_title;
+            color: $page-restaurant_title-color;
+
+        }
     }
+
 }
 
 /*****MENUS*****/
 .menu {
-    margin-bottom: 40px;
 
     &__section {
         margin: 40px 13px 0px 13px;
@@ -191,7 +285,7 @@ main {
             @include menu-title;
         }
 
-        .green_line {
+        .menu__green-line {
             display: block;
             background-color: $secondary-color;
             width: 40px;
@@ -200,11 +294,11 @@ main {
         }
 
         .menu__content {
-            >.dish_card:first-child {
+            >.menu__dish-card:first-child {
                 margin-top: 10.5px;
             }
-            
-            >.dish_card:not(:first-child) {
+
+            >.menu__dish-card:not(:first-child) {
                 margin-top: 12px;
             }
         }
@@ -212,8 +306,56 @@ main {
 }
 
 /*****CTA Commander*****/
-.cta{
+.cta {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    padding: 40px 0 40px 0;
 }
+
+/*****Media query Tablette*****/
+@media screen and (min-width: 1024px) {
+    .restaurant__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 100px;
+
+        .restaurant__title-content {
+            justify-content: center;
+            gap: 24px;
+            position: static;
+        }
+
+        .menu {
+            padding: 0 100px;
+
+            &__section {
+                margin: 40px 0 0 0;
+            }
+        }
+    }
+}
+
+/*****Media query Desktop*****/
+@media screen and (min-width: 1440px) {
+    .restaurant__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 193px;
+
+        .menu{
+            padding: 0 210px 0 210px;
+        }
+    }
+}
+
+/*****Media query Large Desktop*****/
+@media screen and (min-width: 2560px) {
+    .restaurant__container {
+        width: 75%;
+        display: flex;
+        margin: 0 auto;  
+    }
+}
+

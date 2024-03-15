@@ -12,23 +12,57 @@ footer {
         font-family: $secondary-font-family;
         font-size: 18px;
         font-weight: 400;
+        line-height: 26.24px;
         margin-bottom: 16px;
     }
 
-    .footer__content {
+    .footer__list {
         display: flex;
         flex-direction: column;
+        list-style-type: none;
+
+        &__item-bold{
+            @include main-font;
+        }
+
+        &__item-regular{
+            font-family: $main-font-family;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18.75px;
+        }
 
         :not(:first-child) {
             margin-top: 7px;
         }
     }
 
-    .footer__link {
-        @include main-font;
+    .footer__link{
         text-decoration: none;
         color: $color-white;
-
     }
-
 }
+
+/*****Media query Tablette et Desktop*****/
+@media screen and (min-width: 1024px) {
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+
+        .footer__title{
+            padding-right: 50px;
+            padding-top: 57px;
+        }
+
+        .footer__list{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 64px 40px 30px 0;
+
+            :not(:first-child){
+                margin-top: 0;
+            }
+        }
+    }
+} 

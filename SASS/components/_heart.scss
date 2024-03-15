@@ -14,3 +14,11 @@
     right: 41px;
     top: 40px;
 }
+
+/*****Media query*****/
+@media screen and (min-width: 1024px) {
+    .fa-heart{
+        position: static;
+        padding-top: 10px;
+    }
+}
