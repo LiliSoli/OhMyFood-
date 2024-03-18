@@ -20,9 +20,20 @@ footer {
         display: flex;
         flex-direction: column;
         list-style-type: none;
+        position: relative;
 
         &__item-bold{
             @include main-font;
+
+            .fa-solid{
+                font-size: 13px;
+            }
+
+            .footer__link{
+                position: absolute;
+                left: 22px;
+                margin-top: 0;
+            }
         }
 
         &__item-regular{
@@ -32,7 +43,7 @@ footer {
             line-height: 18.75px;
         }
 
-        :not(:first-child) {
+        >:not(:first-child) {
             margin-top: 7px;
         }
     }
@@ -59,6 +70,10 @@ footer {
             flex-direction: row;
             gap: 20px;
             padding: 64px 40px 30px 0;
+
+            .footer__link{
+                position: static;
+            }
 
             :not(:first-child){
                 margin-top: 0;

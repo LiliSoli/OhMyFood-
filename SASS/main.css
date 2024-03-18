@@ -202,6 +202,7 @@ footer .footer__list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  position: relative;
 }
 footer .footer__list__item-bold {
   font-family: "Roboto", sans serif;
@@ -209,13 +210,21 @@ footer .footer__list__item-bold {
   font-size: 16px;
   line-height: 18.75px;
 }
+footer .footer__list__item-bold .fa-solid {
+  font-size: 13px;
+}
+footer .footer__list__item-bold .footer__link {
+  position: absolute;
+  left: 22px;
+  margin-top: 0;
+}
 footer .footer__list__item-regular {
   font-family: "Roboto", sans serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
 }
-footer .footer__list :not(:first-child) {
+footer .footer__list > :not(:first-child) {
   margin-top: 7px;
 }
 footer .footer__link {
@@ -238,6 +247,9 @@ footer .footer__link {
     flex-direction: row;
     gap: 20px;
     padding: 64px 40px 30px 0;
+  }
+  footer .footer__list .footer__link {
+    position: static;
   }
   footer .footer__list :not(:first-child) {
     margin-top: 0;
@@ -326,6 +338,9 @@ main .localization__text {
   margin: 0 20px 0 32px;
   position: relative;
 }
+.functioning__content .functioning__step:hover .fa-solid {
+  color: #9356DC;
+}
 .functioning__content .functioning__step:not(:first-child) {
   margin-top: 25px;
 }
@@ -355,14 +370,8 @@ main .localization__text {
   display: flex;
   gap: 2px;
 }
-.functioning__content .functioning__step .icon-menu:hover .fa-solid {
-  color: #9356DC;
-}
 .functioning__content .functioning__step .fa-solid {
   color: #7E7E7E;
-}
-.functioning__content .functioning__step .fa-solid:hover {
-  color: #9356DC;
 }
 
 /*****Restaurants*****/

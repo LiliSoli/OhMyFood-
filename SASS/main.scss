@@ -85,6 +85,12 @@ main {
             margin: 0 20px 0 32px;
             position: relative;
 
+            &:hover {
+                    .fa-solid {
+                        color: $primary-color;
+                    } 
+                }
+
             &:not(:first-child) {
                 margin-top: 25px;
             }
@@ -116,20 +122,10 @@ main {
                 font-size: 16px;
                 display: flex;
                 gap: 2px;
-
-                &:hover {
-                    .fa-solid {
-                        color: $primary-color;
-                    }
-                }
             }
 
-            .fa-solid {
+            .fa-solid{
                 color: $icon-color;
-
-                &:hover {
-                    color: $primary-color;
-                }
             }
         }
 
