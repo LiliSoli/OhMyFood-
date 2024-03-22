@@ -2,23 +2,74 @@
 @import '../utils/mixin';
 
 /*****heart*****/
-.fa-heart{
-    font-size: 21px;
-    position: absolute;
-    right: 25px;
-    top: 23px;
-    color: black;
-}
+.heart-block {
+    .fa-heart {
+        font-size: 21px;
+        position: absolute;
+        right: 25px;
+        top: 23px;
+    }
 
-.restaurant-page-heart{
-    right: 41px;
-    top: 40px;
+    .fa-regular {
+        font-weight: 400;
+    }
+
+    .empty-like {
+        color: black;
+        opacity: 1;
+    }
+
+
+    .full-like {
+        opacity: 0;
+        transform: scale(0%);
+        transition: transform 300ms;
+        color: transparent;
+        background-image: linear-gradient(to top, $primary-color, $secondary-button-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .restaurant-page-heart {
+        right: 41px;
+        top: 40px;
+    }
+
+    &:hover>.empty-like {
+        opacity: 0;
+        transition: opacity 250ms 100ms;
+    }
+
+    &:not(:hover)>.empty-like {
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    &:hover>.full-like {
+        transform: scale(100%);
+        transform-origin: center bottom;
+        opacity: 1;
+    }
+
+    // &:not(:hover) > .full-like {
+    //     opacity: 0;
+    //     transition: opacity 3100ms;
+    // }
 }
 
 /*****Media query*****/
 @media screen and (min-width: 1024px) {
-    .fa-heart{
-        position: static;
-        padding-top: 10px;
-    }
+    .heart-block {
+        position: relative;
+        
+        .fa-heart {
+            right: 0;
+            top: 10px;
+        }
+        
+        .restaurant-page-heart {
+            top: 10px;
+            left: 24px;
+        }
+    } 
 }

@@ -53,6 +53,7 @@ header img {
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  transition: filter 0.5s, opacity 0.5s;
 }
 .button:hover {
   filter: drop-shadow(0 4px 15px 0px rgba(0, 0, 0, 0.35));
@@ -125,24 +126,58 @@ header img {
 /*****Fonts*****/
 /*****Fonts*****/
 /*****heart*****/
-.fa-heart {
+.heart-block .fa-heart {
   font-size: 21px;
   position: absolute;
   right: 25px;
   top: 23px;
-  color: black;
 }
-
-.restaurant-page-heart {
+.heart-block .fa-regular {
+  font-weight: 400;
+}
+.heart-block .empty-like {
+  color: black;
+  opacity: 1;
+}
+.heart-block .full-like {
+  opacity: 0;
+  transform: scale(0%);
+  transition: transform 300ms;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.heart-block .restaurant-page-heart {
   right: 41px;
   top: 40px;
+}
+.heart-block:hover > .empty-like {
+  opacity: 0;
+  transition: opacity 250ms 100ms;
+}
+.heart-block:not(:hover) > .empty-like {
+  opacity: 1;
+  transition-delay: 0s;
+}
+.heart-block:hover > .full-like {
+  transform: scale(100%);
+  transform-origin: center bottom;
+  opacity: 1;
 }
 
 /*****Media query*****/
 @media screen and (min-width: 1024px) {
-  .fa-heart {
-    position: static;
-    padding-top: 10px;
+  .heart-block {
+    position: relative;
+  }
+  .heart-block .fa-heart {
+    right: 0;
+    top: 10px;
+  }
+  .heart-block .restaurant-page-heart {
+    top: 10px;
+    left: 24px;
   }
 }
 /*****Colors*****/
@@ -543,9 +578,8 @@ main .localization__text {
     margin: 0 100px;
   }
   .restaurant__container .restaurant__title-content {
+    display: flex;
     justify-content: center;
-    gap: 24px;
-    position: static;
   }
   .restaurant__container .menu {
     padding: 0 100px;
