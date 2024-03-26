@@ -3,6 +3,8 @@
 
 /*****heart*****/
 .heart-block {
+    width: 50px;
+
     .fa-heart {
         font-size: 21px;
         position: absolute;
@@ -50,11 +52,6 @@
         transform-origin: center bottom;
         opacity: 1;
     }
-
-    // &:not(:hover) > .full-like {
-    //     opacity: 0;
-    //     transition: opacity 3100ms;
-    // }
 }
 
 /*****Media query*****/

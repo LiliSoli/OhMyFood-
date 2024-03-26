@@ -1,31 +1,86 @@
 @import '../utils/variable';
 @import '../utils/mixin';
 
-.menu__dish-card{
-    width: 100%;
-    border-radius: 15.04px;
+.menu__dish-card {
+    height: 69px;
     background-color: $color-white;
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-    padding: 12px 15px;
+    border-radius: 15px;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
 
-        .menu__dish-title{
-            @include dish-title;
-        }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: space-between;
+        flex-grow: 1;
+        position: relative;
 
-        .menu__dish-subtitle{
+        .menu__dish-card__text {
+            padding: 12px 0 12px 15px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 5px;
+            flex-direction: column;
+            justify-content: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+            box-sizing: border-box;
 
-            p{
-                @include dish-subtitle;
+            h3 {
+                @include dish-title;
+                padding-bottom: 5px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0;
             }
-    
-            span{
+
+            .menu__dish-card__subtitle {
                 @include dish-subtitle;
-                font-weight: 700;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
             }
         }
 
+        .menu__dish-card__price {
+            @include dish-subtitle;
+            font-weight: 700;
+            padding: 39px 15px 0 10px;
+            transition: transform 400ms;
+        }
+    }
+
+    &__check {
+        width: 59px;
+        height: 69px;
+        border-radius: 0 15px 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        color: $color-white;
+        font-size: 20px;
+        transition: transform 400ms;
+        position: absolute;
+        right: -59px;
+    }
+
+    &:hover>.menu__dish-card__check {
+        transform: translateX(-59px);
+    }
+
+    &:hover>.menu__dish-card__content .menu__dish-card__price {
+        transform: translateX(-59px);
+    }
+
+    &:hover>.menu__dish-card__content .menu__dish-card__text{
+        width: calc(100% - 105px);
+    }
 }

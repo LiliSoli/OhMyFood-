@@ -126,6 +126,9 @@ header img {
 /*****Fonts*****/
 /*****Fonts*****/
 /*****heart*****/
+.heart-block {
+  width: 50px;
+}
 .heart-block .fa-heart {
   font-size: 21px;
   position: absolute;
@@ -184,36 +187,87 @@ header img {
 /*****Fonts*****/
 /*****Fonts*****/
 .menu__dish-card {
-  width: 100%;
-  border-radius: 15.04px;
+  height: 69px;
   background-color: #FFFFFF;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-  padding: 12px 15px;
+  border-radius: 15px;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.menu__dish-card .menu__dish-title {
+.menu__dish-card__content {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
+  position: relative;
+}
+.menu__dish-card__content .menu__dish-card__text {
+  padding: 12px 0 12px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+.menu__dish-card__content .menu__dish-card__text h3 {
   font-family: "Roboto", sans serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 21.09px;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
 }
-.menu__dish-card .menu__dish-subtitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-.menu__dish-card .menu__dish-subtitle p {
+.menu__dish-card__content .menu__dish-card__text .menu__dish-card__subtitle {
   font-family: "Roboto", sans serif;
   font-weight: 300;
   font-size: 15.04px;
   line-height: 17.63px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
-.menu__dish-card .menu__dish-subtitle span {
+.menu__dish-card__content .menu__dish-card__price {
   font-family: "Roboto", sans serif;
   font-weight: 300;
   font-size: 15.04px;
   line-height: 17.63px;
   font-weight: 700;
+  padding: 39px 15px 0 10px;
+  transition: transform 400ms;
+}
+.menu__dish-card__check {
+  width: 59px;
+  height: 69px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  font-size: 20px;
+  transition: transform 400ms;
+  position: absolute;
+  right: -59px;
+}
+.menu__dish-card:hover > .menu__dish-card__check {
+  transform: translateX(-59px);
+}
+.menu__dish-card:hover > .menu__dish-card__content .menu__dish-card__price {
+  transform: translateX(-59px);
+}
+.menu__dish-card:hover > .menu__dish-card__content .menu__dish-card__text {
+  width: calc(100% - 105px);
 }
 
 /*****Colors*****/
