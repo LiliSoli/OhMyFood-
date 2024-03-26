@@ -25,7 +25,7 @@
     .full-like {
         opacity: 0;
         transform: scale(0%);
-        transition: transform 300ms;
+        transition: all 300ms;
         color: transparent;
         background-image: linear-gradient(to top, $primary-color, $secondary-button-color);
         background-clip: text;
