@@ -1,5 +1,6 @@
 @import 'utils/variable';
 @import 'utils/mixin';
+@import 'components/loader';
 @import 'layout/header';
 @import 'components/button';
 @import 'components/card';
@@ -60,6 +61,11 @@ main {
         text-align: center;
         margin: 20px max(26px) 27px max(26px);
     }
+}
+
+.explore-restaurants {
+    color: inherit;
+    text-decoration: none;
 }
 
 /*****Fonctionnement*****/
@@ -341,7 +347,7 @@ main {
                 animation: animCard 1000ms 425ms ease-in-out forwards;
             }
 
-            .anim9 {
+            .anim9{
                 opacity: 0;
                 animation: animCard 1000ms 475ms ease-in-out forwards;
             }

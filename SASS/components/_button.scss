@@ -6,13 +6,14 @@
     display: flex;
     align-items: center;
     color: $color-white;
-    background: linear-gradient(to top, $primary-color, $secondary-button-color);
+    background: $linear-gradient;
     border: none;
     border-radius: 25px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     transition: filter 0.5s, opacity 0.5s; 
 
     &:hover{
+        cursor: pointer;
         filter: drop-shadow(0 4px 15px 0px rgba(0, 0, 0, 0.35));
         opacity: 0.85;
     }

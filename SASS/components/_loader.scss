@@ -1,0 +1,109 @@
+@import '../utils/variable';
+@import '../utils/mixin';
+
+.anim-loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+
+    .loader {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $secondary-font-family;
+        background-color: $primary-bg-color;
+        text-align: center;
+        animation: fadeOut 3s forwards;
+
+        &__text {
+            padding: 10px 10px 40px 10px;
+            font-size: 30px;
+            background-image: $linear-gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        &__circles {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            display: inline-block;
+            animation: spin 750ms linear infinite;
+
+            .circle1 {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                opacity: 1;
+                background-image: $linear-gradient-loader;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+
+
+            }
+
+            .circle2 {
+                display: inline-block;
+                position: absolute;
+                top: -3px;
+                left: 0px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                border: 20px solid transparent;
+                border-top: 23px solid $primary-bg-color;
+                background-color: transparent;
+                z-index: 1;
+            }
+
+            .circle3 {
+                display: inline-block;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 41px;
+                height: 41px;
+                border-radius: 50px;
+                background-color: $primary-bg-color;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+    }
+}
