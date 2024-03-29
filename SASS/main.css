@@ -152,6 +152,7 @@ header img {
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   transition: filter 0.5s, opacity 0.5s;
+  text-decoration: none;
 }
 .button:hover {
   cursor: pointer;
@@ -500,11 +501,6 @@ main .localization__text {
   margin: 20px 26px 27px 26px;
 }
 
-.explore-restaurants {
-  color: inherit;
-  text-decoration: none;
-}
-
 /*****Fonctionnement*****/
 .functioning {
   background-color: #FFFFFF;
@@ -700,57 +696,45 @@ main .localization__text {
 .menu__section {
   margin: 40px 13px 0px 13px;
 }
-.menu__section .anim1 {
+.menu__section .anim1, .menu__section .anim2, .menu__section .anim3, .menu__section .anim4, .menu__section .anim5, .menu__section .anim6, .menu__section .anim7, .menu__section .anim8, .menu__section .anim9, .menu__section .anim10, .menu__section .anim11, .menu__section .anim12, .menu__section .anim13 {
   opacity: 0;
   animation: animCard 1000ms 75ms ease-in-out forwards;
 }
 .menu__section .anim2 {
-  opacity: 0;
-  animation: animCard 1000ms 125ms ease-in-out forwards;
+  animation-delay: 125ms;
 }
 .menu__section .anim3 {
-  opacity: 0;
-  animation: animCard 1000ms 175ms ease-in-out forwards;
+  animation-delay: 175ms;
 }
 .menu__section .anim4 {
-  opacity: 0;
-  animation: animCard 1000ms 225ms ease-in-out forwards;
+  animation-delay: 225ms;
 }
 .menu__section .anim5 {
-  opacity: 0;
-  animation: animCard 1000ms 275ms ease-in-out forwards;
+  animation-delay: 275ms;
 }
 .menu__section .anim6 {
-  opacity: 0;
-  animation: animCard 1000ms 325ms ease-in-out forwards;
+  animation-delay: 325ms;
 }
 .menu__section .anim7 {
-  opacity: 0;
-  animation: animCard 1000ms 375ms ease-in-out forwards;
+  animation-delay: 375ms;
 }
 .menu__section .anim8 {
-  opacity: 0;
-  animation: animCard 1000ms 425ms ease-in-out forwards;
+  animation-delay: 425ms;
 }
 .menu__section .anim9 {
-  opacity: 0;
-  animation: animCard 1000ms 475ms ease-in-out forwards;
+  animation-delay: 475ms;
 }
 .menu__section .anim10 {
-  opacity: 0;
-  animation: animCard 1000ms 525ms ease-in-out forwards;
+  animation-delay: 525ms;
 }
 .menu__section .anim11 {
-  opacity: 0;
-  animation: animCard 1000ms 575ms ease-in-out forwards;
+  animation-delay: 5755ms;
 }
 .menu__section .anim12 {
-  opacity: 0;
-  animation: animCard 1000ms 625ms ease-in-out forwards;
+  animation-delay: 625ms;
 }
 .menu__section .anim13 {
-  opacity: 0;
-  animation: animCard 1000ms 675ms ease-in-out forwards;
+  animation-delay: 675ms;
 }
 .menu__section .menu__title {
   font-family: "Roboto", sans serif;
