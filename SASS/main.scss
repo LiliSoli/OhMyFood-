@@ -286,6 +286,71 @@ main {
     &__section {
         margin: 40px 13px 0px 13px;
 
+        .anim1 {
+            opacity: 0;
+            animation: animCard 1000ms 75ms ease-in-out forwards;
+        }
+
+        .anim2 {
+            opacity: 0;
+            animation: animCard 1000ms 125ms ease-in-out forwards;
+        }
+
+        .anim3 {
+            opacity: 0;
+            animation: animCard 1000ms 175ms ease-in-out forwards;
+        }
+
+        .anim4 {
+            opacity: 0;
+            animation: animCard 1000ms 225ms ease-in-out forwards;
+        }
+
+        .anim5 {
+            opacity: 0;
+            animation: animCard 1000ms 275ms ease-in-out forwards;
+        }
+
+        .anim6 {
+            opacity: 0;
+            animation: animCard 1000ms 325ms ease-in-out forwards;
+        }
+
+        .anim7 {
+            opacity: 0;
+            animation: animCard 1000ms 375ms ease-in-out forwards;
+        }
+
+        .anim8 {
+            opacity: 0;
+            animation: animCard 1000ms 425ms ease-in-out forwards;
+        }
+
+        .anim9 {
+            opacity: 0;
+            animation: animCard 1000ms 475ms ease-in-out forwards;
+        }
+
+        .anim10 {
+            opacity: 0;
+            animation: animCard 1000ms 525ms ease-in-out forwards;
+        }
+
+        .anim11 {
+            opacity: 0;
+            animation: animCard 1000ms 575ms ease-in-out forwards;
+        }
+
+        .anim12 {
+            opacity: 0;
+            animation: animCard 1000ms 625ms ease-in-out forwards;
+        }
+
+        .anim13 {
+            opacity: 0;
+            animation: animCard 1000ms 675ms ease-in-out forwards;
+        }
+
         .menu__title {
             @include menu-title;
         }
@@ -305,56 +370,6 @@ main {
 
             >.menu__dish-card:not(:first-child) {
                 margin-top: 12px;
-            }
-
-            .anim1 {
-                opacity: 0;
-                animation: animCard 1000ms 75ms ease-in-out forwards;
-            }
-
-            .anim2 {
-                opacity: 0;
-                animation: animCard 1000ms 125ms ease-in-out forwards;
-            }
-
-            .anim3 {
-                opacity: 0;
-                animation: animCard 1000ms 175ms ease-in-out forwards;
-            }
-
-            .anim4 {
-                opacity: 0;
-                animation: animCard 1000ms 225ms ease-in-out forwards;
-            }
-
-            .anim5 {
-                opacity: 0;
-                animation: animCard 1000ms 275ms ease-in-out forwards;
-            }
-
-            .anim6 {
-                opacity: 0;
-                animation: animCard 1000ms 325ms ease-in-out forwards;
-            }
-
-            .anim7 {
-                opacity: 0;
-                animation: animCard 1000ms 375ms ease-in-out forwards;
-            }
-
-            .anim8 {
-                opacity: 0;
-                animation: animCard 1000ms 425ms ease-in-out forwards;
-            }
-
-            .anim9{
-                opacity: 0;
-                animation: animCard 1000ms 475ms ease-in-out forwards;
-            }
-
-            .anim10 {
-                opacity: 0;
-                animation: animCard 1000ms 525ms ease-in-out forwards;
             }
         }
     }

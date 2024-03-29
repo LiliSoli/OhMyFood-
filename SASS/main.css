@@ -12,8 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-  pointer-events: none;
+  z-index: 99;
+  visibility: visible;
+  animation: fadeOut 3s forwards;
 }
 .anim-loader .loader {
   width: 100%;
@@ -25,7 +26,6 @@
   font-family: "Shrikhand", serif;
   background-color: #F6F6F6;
   text-align: center;
-  animation: fadeOut 3s forwards;
 }
 .anim-loader .loader__text {
   padding: 10px 10px 40px 10px;
@@ -95,6 +95,8 @@
   }
   100% {
     opacity: 0;
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -698,6 +700,58 @@ main .localization__text {
 .menu__section {
   margin: 40px 13px 0px 13px;
 }
+.menu__section .anim1 {
+  opacity: 0;
+  animation: animCard 1000ms 75ms ease-in-out forwards;
+}
+.menu__section .anim2 {
+  opacity: 0;
+  animation: animCard 1000ms 125ms ease-in-out forwards;
+}
+.menu__section .anim3 {
+  opacity: 0;
+  animation: animCard 1000ms 175ms ease-in-out forwards;
+}
+.menu__section .anim4 {
+  opacity: 0;
+  animation: animCard 1000ms 225ms ease-in-out forwards;
+}
+.menu__section .anim5 {
+  opacity: 0;
+  animation: animCard 1000ms 275ms ease-in-out forwards;
+}
+.menu__section .anim6 {
+  opacity: 0;
+  animation: animCard 1000ms 325ms ease-in-out forwards;
+}
+.menu__section .anim7 {
+  opacity: 0;
+  animation: animCard 1000ms 375ms ease-in-out forwards;
+}
+.menu__section .anim8 {
+  opacity: 0;
+  animation: animCard 1000ms 425ms ease-in-out forwards;
+}
+.menu__section .anim9 {
+  opacity: 0;
+  animation: animCard 1000ms 475ms ease-in-out forwards;
+}
+.menu__section .anim10 {
+  opacity: 0;
+  animation: animCard 1000ms 525ms ease-in-out forwards;
+}
+.menu__section .anim11 {
+  opacity: 0;
+  animation: animCard 1000ms 575ms ease-in-out forwards;
+}
+.menu__section .anim12 {
+  opacity: 0;
+  animation: animCard 1000ms 625ms ease-in-out forwards;
+}
+.menu__section .anim13 {
+  opacity: 0;
+  animation: animCard 1000ms 675ms ease-in-out forwards;
+}
 .menu__section .menu__title {
   font-family: "Roboto", sans serif;
   font-weight: 300;
@@ -716,46 +770,6 @@ main .localization__text {
 }
 .menu__section .menu__content > .menu__dish-card:not(:first-child) {
   margin-top: 12px;
-}
-.menu__section .menu__content .anim1 {
-  opacity: 0;
-  animation: animCard 1000ms 75ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim2 {
-  opacity: 0;
-  animation: animCard 1000ms 125ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim3 {
-  opacity: 0;
-  animation: animCard 1000ms 175ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim4 {
-  opacity: 0;
-  animation: animCard 1000ms 225ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim5 {
-  opacity: 0;
-  animation: animCard 1000ms 275ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim6 {
-  opacity: 0;
-  animation: animCard 1000ms 325ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim7 {
-  opacity: 0;
-  animation: animCard 1000ms 375ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim8 {
-  opacity: 0;
-  animation: animCard 1000ms 425ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim9 {
-  opacity: 0;
-  animation: animCard 1000ms 475ms ease-in-out forwards;
-}
-.menu__section .menu__content .anim10 {
-  opacity: 0;
-  animation: animCard 1000ms 525ms ease-in-out forwards;
 }
 
 @keyframes animCard {

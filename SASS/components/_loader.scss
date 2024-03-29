@@ -8,8 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    pointer-events: none;
+    z-index: 99;
+    visibility: visible;
+    animation: fadeOut 3s forwards;
 
     .loader {
         width: 100%;
@@ -21,7 +22,7 @@
         font-family: $secondary-font-family;
         background-color: $primary-bg-color;
         text-align: center;
-        animation: fadeOut 3s forwards;
+
 
         &__text {
             padding: 10px 10px 40px 10px;
@@ -102,6 +103,8 @@
 
             100% {
                 opacity: 0;
+                display: none;
+                visibility: hidden;
             }
 
         }
