@@ -548,6 +548,7 @@ main .localization__text {
   background-color: #9356DC;
   position: absolute;
   left: -12px;
+  top: 25px;
 }
 .functioning__content .functioning__step__txt {
   position: absolute;
@@ -620,6 +621,9 @@ main .localization__text {
   .functioning__content .functioning__step:not(:first-child) {
     margin-top: 0px;
   }
+  .functioning__content .functioning__step__txt {
+    top: 20px;
+  }
   .restaurants {
     padding: 30px 100px 30px 100px;
   }
@@ -639,6 +643,9 @@ main .localization__text {
   .functioning {
     padding-left: 180px;
     padding-right: 180px;
+  }
+  .functioning .functioning__content .functioning__step__txt {
+    top: 28px;
   }
   .restaurants {
     padding-left: 180px;
@@ -696,7 +703,19 @@ main .localization__text {
 .menu__section {
   margin: 40px 13px 0px 13px;
 }
-.menu__section .anim1, .menu__section .anim2, .menu__section .anim3, .menu__section .anim4, .menu__section .anim5, .menu__section .anim6, .menu__section .anim7, .menu__section .anim8, .menu__section .anim9, .menu__section .anim10, .menu__section .anim11, .menu__section .anim12, .menu__section .anim13 {
+.menu__section .anim1,
+.menu__section .anim2,
+.menu__section .anim3,
+.menu__section .anim4,
+.menu__section .anim5,
+.menu__section .anim6,
+.menu__section .anim7,
+.menu__section .anim8,
+.menu__section .anim9,
+.menu__section .anim10,
+.menu__section .anim11,
+.menu__section .anim12,
+.menu__section .anim13 {
   opacity: 0;
   animation: animCard 1000ms 75ms ease-in-out forwards;
 }
@@ -728,7 +747,7 @@ main .localization__text {
   animation-delay: 525ms;
 }
 .menu__section .anim11 {
-  animation-delay: 5755ms;
+  animation-delay: 575ms;
 }
 .menu__section .anim12 {
   animation-delay: 625ms;

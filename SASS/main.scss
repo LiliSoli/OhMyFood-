@@ -111,6 +111,7 @@ main {
                 background-color: $primary-color;
                 position: absolute;
                 left: -12px;
+                top: 25px;
             }
 
             &__txt {
@@ -192,6 +193,10 @@ main {
                 &:not(:first-child) {
                     margin-top: 0px;
                 }
+
+                &__txt {
+                    top: 20px;
+                }
             }
         }
     }
@@ -217,6 +222,12 @@ main {
     .functioning {
         padding-left: 180px;
         padding-right: 180px;
+
+        .functioning__content {
+            .functioning__step__txt {
+                top: 28px;
+            }
+        }
     }
 
     .restaurants {
@@ -281,7 +292,19 @@ main {
     &__section {
         margin: 40px 13px 0px 13px;
 
-        .anim1, .anim2, .anim3, .anim4, .anim5, .anim6, .anim7, .anim8, .anim9, .anim10, .anim11, .anim12, .anim13 {
+        .anim1,
+        .anim2,
+        .anim3,
+        .anim4,
+        .anim5,
+        .anim6,
+        .anim7,
+        .anim8,
+        .anim9,
+        .anim10,
+        .anim11,
+        .anim12,
+        .anim13 {
             opacity: 0;
             animation: animCard 1000ms 75ms ease-in-out forwards;
         }
@@ -323,7 +346,7 @@ main {
         }
 
         .anim11 {
-            animation-delay: 5755ms;
+            animation-delay: 575ms;
         }
 
         .anim12 {
